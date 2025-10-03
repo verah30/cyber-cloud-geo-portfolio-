@@ -1,0 +1,7 @@
+cd /c/Lab/repos
+git clone https://github.com/verah30?tab=repositories
+cd cyber-portfolio
+echo "# Cyber Portfolio" > README.md
+git add README.md
+git commit -m "Initial README"
+git push origin main
