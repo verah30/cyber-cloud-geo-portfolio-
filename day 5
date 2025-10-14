@@ -1,0 +1,14 @@
+Day 5 — Exploit-dev, Reverse Shells, C2 Detection & Purple Team
+
+ Wins
+- Exploit-dev warmup: created stack overflow PoC on lab binary; obtained controlled EIP overwrite.
+- Reverse shell: converted PoC to reverse shell and confirmed listener on Kali.
+- C2 detection: wrote Suricata rule to detect shell beacons and an auditd rule to catch nc execution.
+- Purple-teamed the chain: exploited -> beacon detected -> host isolated -> playbook executed.
+
+
+ Reverse shell & C2 mapping
+- Listener: nc -lvnp 
+- Reverse shell payload used (lab-only)
+- Suricata detection: suricata_c2.rule — detects /dev/tcp or typical beacon URI patterns.
+
