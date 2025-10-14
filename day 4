@@ -1,0 +1,22 @@
+# Day 4 — Lateral Movement, Detection Engineering & Purple Team
+
+ Wins
+- Practiced lateral movement in lab: SSH key reuse + controlled SSH hop between lab VMs.
+- Built and tested three detections: SSH anomaly (same key used from multiple hosts), process spawn (psexec/winrm), and suspicious scheduled task creation.
+- Performed purple-team loop: attack → detect → isolate → harden.
+
+ Artifacts
+— ssh_reuse
+  — ssh_key_reuse.sigma, suricata_psexec.rule, cloudwatch_cron_modify.txt
+
+
+Lateral movement notes
+  - ssh -i /home/kali/.s... 
+  - Reused key demonstrated  
+
+Detections implemented
+1. SSH key reuse detection (Sigma): alerts when same key fingerprint used by multiple source IPs within 10 minutes. 
+2. Suricata rule for PSExec-like patterns: suricata_psexec.rule.
+3. CloudWatch Metric Filter for cron/ scheduled task modifications .
+
+
