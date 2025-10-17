@@ -19,3 +19,31 @@ Key Commands
 - Sysmon is central to visibility
 - PowerShell telemetry links processes to network actions
 - Wireshark complements host visibility
+
+ Day 8 Playbook — Suspicious PowerShell Activity Detection
+
+Objective
+Detect malicious PowerShell downloads & script executions via Sysmon and event logs.
+
+Data Sources
+- Sysmon Operational Logs
+- PowerShell Operational Logs
+- Wireshark HTTP PCAPs
+
+
+Day 8 Afternoon — Correlation & Fuzzing Wrap-up
+
+Today’s challenge:
+- Investigating PowerShell-based IEX payloads and simulated command executions.
+- Learned about base64 obfuscation in PowerShell and decoding via `[System.Text.Encoding]::Unicode.GetString`.
+
+Highlights:
+- Sysmon operational logging stabilized 
+- Wireshark & TShark integration fixed 
+- pwsh issues resolved via fallback to powershell.exe
+
+ Steps
+1. Collect Sysmon + PowerShell logs.
+2. Correlate using PowerShell (`Get-WinEvent` filters).
+3. Export HTTP streams using `tshark`.
+4. Flag encoded/obfuscated PowerShell in ScriptBlock logs.
