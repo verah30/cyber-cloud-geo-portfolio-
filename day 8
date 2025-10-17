@@ -1,0 +1,21 @@
+ Day 8 Notes — Sysmon & Quick Hunt Lab
+
+Focus Areas
+- Log correlation between PowerShell & Sysmon
+- Identifying suspicious script blocks
+- Event ID 1 (Process creation) + Event ID 4104 (PowerShell ScriptBlock)
+
+Key Commands
+- Get-WinEvent usage
+- Export-Csv correlation
+- TShark HTTP extraction (pending path fix)
+
+ Issues Faced
+- PATH issues (Wireshark)
+- PowerShell “pwsh” not recognized
+- ScriptBlock extraction errors — fixed by correcting encoding
+
+ Learnings
+- Sysmon is central to visibility
+- PowerShell telemetry links processes to network actions
+- Wireshark complements host visibility
