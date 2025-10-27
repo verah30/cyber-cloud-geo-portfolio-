@@ -1,0 +1,16 @@
+Highlights
+- Continued PortSwigger CSRF labs and built a safe PoC HTML file.
+- Recon on Windows victim: Nmap full-port scan (nmap_full.txt) and Gobuster enumeration (gobuster_dirs.txt).
+- Collected Windows Security logs (4624/4625), exported to CSV and examined for suspicious logins.
+- AWS: created test S3 bucket and CloudTrail trail to generate audit events (for hunting practice).
+- Blue-team work: created Sigma-style detection for PowerShell -EncodedCommand; documented detection ideas.
+- Started Linux & Windows privilege escalation reconnaissance (commands & notes saved).
+
+Artifacts
+- notes/day11_notes.md
+- notes/day11_recon.md
+- notes/day11_web.md
+- notes/day11_sigma_snippet.yml
+- artifacts/nmap_full.txt
+- artifacts/gobuster_dirs.txt
+- artifacts/logon_events.csv
